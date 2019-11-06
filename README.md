@@ -25,5 +25,5 @@ firebaseConfig: {
 Runs the demo:
 
 ```
-npm install
+ionic serve
 ```
