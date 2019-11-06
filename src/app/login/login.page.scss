@@ -1,0 +1,30 @@
+.login-div{
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 140%;
+}
+.login-input{
+    color: #BCBCBC;
+    background-color:#ECEBEB;
+    border: 10px;
+    border-color: #BCBCBC;
+    border-radius: 7px;
+    height: 55px;
+    font-size: 18px;
+    padding-left: 10px !important;
+}
+
+.login-button{
+    height: 55px;
+}
+
+.pass-forgot{
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    span {
+        color: #3880ff;
+        font-size: 16px;
+    }
+}   

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lost Dogs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Perros perdidos recientemente
+    </ion-list-header>
+  
+    <ion-item *ngFor="let d of dogs" [routerLink]="['/dog-details/', d.id]" routerDirection="forward">
+      <ion-avatar slot="start">
+        <img src="./assets/dog.png">
+      </ion-avatar>
+      <ion-label>
+        <h2><b>{{ d.name }}</b></h2>
+        <h3>Perdido el: <b>{{ d.lostDate }} {{ d.lostHour }}</b></h3>
+        <h3>Zona: <b>{{ d.lostArea }}</b></h3>
+        <p><b>{{d.ownerName}} {{d.ownerPhone}}</b></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

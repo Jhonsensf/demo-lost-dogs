@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Nuevo Perro Perdido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" clearInput [(ngModel)]="dog.name" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Fecha pérdida</ion-label>
+    <ion-datetime [(ngModel)]="dog.lostDate" display-format="DD/MM/YYYY"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Hora pérdida</ion-label>
+    <ion-datetime [(ngModel)]="dog.lostHour" display-format="HH:mm"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Zona</ion-label>
+    <ion-input [(ngModel)]="dog.lostArea" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Información Adicional</ion-label>
+    <ion-textarea
+      #textarea
+      [attr.maxlength]="5000"
+      rows="5"
+      [(ngModel)]="dog.additionalData"
+    ></ion-textarea>
+  </ion-item>
+  <ion-button expand="full" (click)="saveDog(dog)">Guardar</ion-button>
+</ion-content>

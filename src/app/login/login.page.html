@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Acceder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="login-div">
+      <ion-input class="login-input" [(ngModel)]="user.email" type="email" placeholder="Email" clearInput></ion-input>
+    </div>
+    <div class="login-div">
+      <ion-input class="login-input" [(ngModel)]="user.password"  type="password" placeholder="Contraseña" clearInput></ion-input>
+    </div>
+    <div class="login-div">
+      <ion-button class="login-button" expand="block" [disabled]="!user.email || !user.password" (click)="login(user)">Acceder</ion-button>
+    </div>
+  </ion-list>
+  <div class="pass-forgot">
+    <span (click)="goToNewUser()"> ¿No eres usuario? Date de alta</span>
+  </div>
+</ion-content>
